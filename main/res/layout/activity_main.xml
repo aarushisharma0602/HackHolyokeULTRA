@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_ingredients_of_your_recipe"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <CheckBox
+        android:id="@+id/flourBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flour"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milk"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flourBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/calorieBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Calories"
+        app:layout_constraintBottom_toBottomOf="@+id/cal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cal"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/proteinBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Protein"
+        app:layout_constraintBottom_toBottomOf="@+id/protein"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toEndOf="@+id/protein"
+        app:layout_constraintTop_toTopOf="@+id/protein"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/fatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Calculate Fat"
+        app:layout_constraintBottom_toBottomOf="@+id/fat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <TextView
+        android:id="@+id/fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fat"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fat"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbs"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/protein"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <TextView
+        android:id="@+id/sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sodium"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cheeseBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheese"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/milkBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/nutBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peanuts"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cheeseBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/oatBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Oats"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nutBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/eggBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Eggs"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oatBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/butterBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Butter"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/riceBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Rice"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butterBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/yoghurtBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Yoghurt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/riceBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/creamBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Cream"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yoghurtBox"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <Button
+        android:id="@+id/carbsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Carbs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toEndOf="@+id/carbs"
+        app:layout_constraintTop_toBottomOf="@+id/proteinBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/sodiumBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Sodium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toEndOf="@+id/sodium"
+        app:layout_constraintTop_toBottomOf="@+id/carbsBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/flourQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/flourBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/flourBox"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+    <EditText
+        android:id="@+id/milkQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/milkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/milkBox"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+    <EditText
+        android:id="@+id/cheeseQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cheeseBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/cheeseBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/peanutQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:ems="10"
+        android:hint=" Quantity in tbsp"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nutBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/nutBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/oatsQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/oatBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/oatBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/eggsQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:hint="Number of Eggs"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/eggBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/eggBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/riceQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/riceBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/riceBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/yoghurtQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/yoghurtBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/yoghurtBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/creamQt"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint=" Quantity in cups"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/creamBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/creamBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/butterQt2"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint=" Quantity in grams"
+        android:inputType="textShortMessage|textPersonName|text|numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/butterBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/flourBox"
+        app:layout_constraintTop_toTopOf="@+id/butterBox"
+        app:layout_constraintVertical_bias="0.142" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
